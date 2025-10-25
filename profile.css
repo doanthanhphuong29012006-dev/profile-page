@@ -1,0 +1,158 @@
+body 
+{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f3ebff;
+}
+
+.logo img 
+{
+    --hover-scale: 1;
+    height: 50px;
+    cursor: pointer;
+    animation: fly 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover 
+{
+    --hover-scale: 1.06;
+}
+
+@keyframes fly 
+{
+    0% { transform: translate(0, 0) rotate(0deg) scale(var(--hover-scale)); }
+    25% { transform: translate(5px, -5px) rotate(5deg) scale(var(--hover-scale)); }
+    50% { transform: translate(0, -10px) rotate(0deg) scale(var(--hover-scale)); }
+    75% { transform: translate(-5px, -5px) rotate(-5deg) scale(var(--hover-scale)); }
+    100% { transform: translate(0, 0) rotate(0deg) scale(var(--hover-scale)); }
+}
+
+/* Navbar */
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background: white;
+    margin: 20px auto;
+    padding: 10px 30px;
+    border-radius: 16px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav_links a 
+{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.nav_links a:hover, .nav_links .active 
+{
+    color: #7b44ff;
+}
+
+/* Profile box */
+.profile_container 
+{
+    /*border: 1px solid #d6bfff;*/
+    border-radius: 24px;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    
+}
+
+.user_info 
+{
+    background: white;
+    /*border: 1px dashed #b48aff;*/
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.avatar 
+{
+    width: 80px;
+    height: 80px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+.banner 
+{
+    height: 2px;
+    /*border: 1px solid #b48aff;*/
+    margin: 10px 0;
+}
+.user_info h2 
+{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.stats span 
+{
+    margin: 0 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Tabs */
+.tabs 
+{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.tab 
+{
+    background: white;
+    border: none;
+    padding: 8px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.tab.active 
+{
+    color: white;
+    background: #a16eff;
+}
+
+/* Status box */
+.status_box, .forum_box 
+{
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.status_box .icon, .forum_box .icon 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    margin-right: 10px;
+}
+.status_box input 
+{
+    flex: 1;
+    border: 4px solid black;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+.post 
+{
+    flex: 1;
+    border: 4px solid black;
+    border-radius: 20px;
+    padding: 60px;
+}

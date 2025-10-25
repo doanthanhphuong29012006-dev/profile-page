@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel = "stylesheet" href = "profile.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class = "logo">
+            <img src = "bee.png" alt = "Bee logo" id = "beeLogo">
+        </div>
+
+        <div class = "nav_links">
+            <a href = "#">TRENDING</a>
+            <a href = "#">MY FORUM</a>
+            <a href = "#">SEARCH</a>
+            <a href = "#" class="active">PROFILE</a>
+        </div>
+    </div>
+
+    <!-- Thông tin người dùng -->
+    <div class = "profile_container">
+
+        <div class = "user_info">
+            <div class = "avatar"></div>
+            <div class = "banner"></div>
+            <h2>USER NAME</h2>
+            <div class = "stats">
+                <span>FOLLOWER</span>
+                <span>FOLLOWING</span>
+                <span>FORUMS</span>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class = "tabs">
+            <button class = "tab active">PROFILE POST</button>
+            <button class = "tab">LATEST ACTIVITY</button>
+        </div>
+
+        <!-- Status update -->
+        <div class = "status_box">
+            <div class = "icon"></div>
+            <input type = "text" placeholder = "UPDATE YOUR STATUS">
+        </div>
+
+        <!-- Forum posts -->
+        <div class = "forum_box">
+            <div class = "icon"></div>
+            <div class = "post">
+                <p>POSTING DATE ...</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
