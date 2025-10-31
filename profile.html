@@ -1,60 +1,138 @@
 <!DOCTYPE html>
-<html lang = "vi">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel = "stylesheet" href = "profile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <div class="navbar">
-        <div class = "logo">
-            <img src = "bee.png" alt = "Bee logo" id = "beeLogo">
-        </div>
-
-        <div class = "nav_links">
-            <a href = "#">TRENDING</a>
-            <a href = "#">MY FORUM</a>
-            <a href = "#">SEARCH</a>
-            <a href = "#" class="active">PROFILE</a>
-        </div>
-    </div>
-
-    <!-- Thông tin người dùng -->
-    <div class = "profile_container">
-
-        <div class = "user_info">
-            <div class = "avatar"></div>
-            <div class = "banner"></div>
-            <h2>USER NAME</h2>
-            <div class = "stats">
-                <span>FOLLOWER</span>
-                <span>FOLLOWING</span>
-                <span>FORUMS</span>
+    <header class="app_header">
+        <div class="header_left">
+            <div class="logo">
+                <img src="bee.png" alt="Bee Logo" class="logo">
             </div>
         </div>
+        
+        <nav class="main_nav">
+            <a href="#" class="header_link">
+                <i class="fa-solid fa-magnifying-glass"></i> SEARCH
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-chart-simple"></i> TRENDING
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-comment"></i> MY FORUM
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-bell"></i> NOTIFICATION
+            </a>
+            <a href="#" class="profile_link active"> PROFILE
+            <span class="profile_placeholder"></span>
+        </a>
+        </nav>
+    </header>
 
-        <!-- Tabs -->
-        <div class = "tabs">
-            <button class = "tab active">PROFILE POST</button>
-            <button class = "tab">LATEST ACTIVITY</button>
-        </div>
+    <div class="main_layout">
 
-        <!-- Status update -->
-        <div class = "status_box">
-            <div class = "icon"></div>
-            <input type = "text" placeholder = "UPDATE YOUR STATUS">
-        </div>
+        <aside class="sidebar">
+            <nav class="sidebar_menu">
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Trending</span>
+                </a>
+            </nav>
 
-        <!-- Forum posts -->
-        <div class = "forum_box">
-            <div class = "icon"></div>
-            <div class = "post">
-                <p>POSTING DATE ...</p>
+            <div class="sidebar_section">
+                <h3>Tags nổi bật</h3>
+                <nav class="sidebar_menu">
+                    <a href="#"><i class="fa-solid fa-gamepad"></i><span>Game</span></a>
+                    <a href="#"><i class="fa-solid fa-basketball"></i><span>Thể thao</span></a>
+                    <a href="#"><i class="fa-solid fa-chart-line"></i><span>Kinh doanh</span></a>
+                    <a href="#"><i class="fa-solid fa-film"></i><span>Phim</span></a>
+                    <a href="#"><i class="fa-solid fa-star"></i><span>Nghệ thuật</span></a>
+                </nav>
             </div>
-        </div>
-    </div>
 
+            <div class="sidebar_section">
+                <h3>Tài nguyên</h3>
+                <nav class="sidebar_menu">
+                    <a href="#"><i class="fa-regular fa-comment"></i><span>Forum</span></a>
+                    <a href="#"><i class="fa-solid fa-plus"></i><span>Tạo forum</span></a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main_content">
+
+            <section class="profile_header">
+                <label for="avatar_upload" class="profile_avatar_label">
+                    <img src="placeholder_avatar.png" alt="Avatar" id="main_avatar_img">
+                    </label>
+                <input type="file" id="avatar_upload" accept="image/*" style="display: none;">
+                
+                <h2 id="profile_username">USER NAME</h2>
+                
+                <div class="profile_stats">
+                    <div class="stat_item">
+                        <strong>FOLLOWER:</strong> XXX
+                    </div>
+                    <div class="stat_item">
+                        <strong>FOLLOWING:</strong> XXX
+                    </div>
+                    <div class="stat_item">
+                        <strong>FORUMS</strong>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="profile_tabs">
+                <button class="tab_button active" data-tab="posts">PROFILE POST</button>
+                <button class="tab_button" data-tab="activity">LATEST ACTIVITY</button>
+            </nav>
+
+            <section class="status_update_box">
+                <img src="placeholder_avatar.png" alt="Avatar" class="avatar_small">
+                <input type="text" placeholder="UPDATE YOUR STATUS">
+            </section>
+
+            <section class="forum_posts">
+                <h3>FORUM POSTS</h3>
+
+                <article class="post_card">
+                    <div class="post_header">
+                        <img src="placeholder_avatar.png" alt="Avatar" class="avatar_small">
+                        <div class="post_info">
+                            <span class="post_user_name">USER NAME</span>
+                            <span class="post_time">Thời gian đăng</span>
+                        </div>
+                    </div>
+                    <div class="post_content_box">
+                        </div>
+                    <div class="post_footer">
+                        <button class="vote_button">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <span>Vote</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <div class="comment_box">
+                    <img src="placeholder_avatar.png" alt="Avatar" class="avatar_small">
+                    <input type="text" placeholder="Comment">
+                </div>
+            </section>
+
+        </main>
+    </div>
+    
+    <script src="profile.js"></script>
 </body>
 </html>
